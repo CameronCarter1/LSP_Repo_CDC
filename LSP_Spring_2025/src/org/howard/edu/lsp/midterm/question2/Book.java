@@ -1,5 +1,10 @@
 package org.howard.edu.lsp.midterm.question2;
 
+/**
+ * The Book class represents a book in a library system.
+ * It includes attributes such as title, author, ISBN, and year of publication.
+ */
+
 public class Book {
     private String title;
     private String author;
@@ -32,4 +37,3 @@ public class Book {
                ", ISBN: " + ISBN + ", Year Published: " + yearPublished;
     }
 }
-
