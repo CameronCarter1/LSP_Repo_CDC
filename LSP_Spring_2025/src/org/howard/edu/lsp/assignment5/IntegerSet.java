@@ -1,5 +1,7 @@
 package org.howard.edu.lsp.assignment5;
 
+import java.util.List;
+
 public class IntegerSet {
 	// Store the set elements in an ArrayList.
 	private List<Integer> set = new ArrayList<Integer>();
@@ -14,7 +16,9 @@ public class IntegerSet {
 	}
 	
 	// Clears the internal representation of the set. 5 pts.
-	public void clear() {…};
+	public void clear() {
+		set.clear();
+	};
 	
 	// Returns the length of the set. 5 pts.
 	
@@ -37,7 +41,11 @@ public class IntegerSet {
 	public int smallest() {…};
 	
 	// Adds an item to the set or does nothing it already there. 5 pts.
-	public void add(int item) {…}; // adds item to the set or does nothing if it is in set
+	public void add(int item) {
+		if (!set.contains(item)) {
+			set.add(item);
+		}
+	}; // adds item to the set or does nothing if it is in set
 	
 	// Removes an item from the set or does nothing if not there. 5 pts.
 	public void remove(int item) {…};
