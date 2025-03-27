@@ -10,5 +10,12 @@ public class Driver {
 		System.out.println("Set1 after adds: " + set1);
 		set1.clear();
 		System.out.println("Set1 after clear: " + set1);
+		
+		
+		// Test length
+		set1.add(4);
+		set1.add(5);
+		System.out.println("Set1: " + set1);
+		System.out.println("Length of Set1: " + set1.length());
 	}
 }
