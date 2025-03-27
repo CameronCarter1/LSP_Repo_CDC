@@ -17,5 +17,12 @@ public class Driver {
 		set1.add(5);
 		System.out.println("Set1: " + set1);
 		System.out.println("Length of Set1: " + set1.length());
+		
+		// Test equals
+		IntegerSet set2 = new IntegerSet();
+		set2.add(5);
+		set2.add(4);
+		System.out.println("Set1 equals Set2? " + set1.equals(set2));
+
 	}
 }
