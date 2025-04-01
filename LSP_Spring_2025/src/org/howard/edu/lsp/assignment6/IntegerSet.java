@@ -47,14 +47,18 @@ public class IntegerSet {
 	}
 	
 	// Returns the largest item in the set. 5 pts.
-	public int largest() {
-		if(isEmpty()) throw new RuntimeException("Set is empty");
+	public int largest() throws IntegerSetException {
+		if(isEmpty()) {
+			throw new IntegerSetException("Set is empty");
+		}
 		return Collections.max(set);
 	}
 	
 	// Returns the smallest item in the set. 5 pts.
-	public int smallest() {
-		if(isEmpty()) throw new RuntimeException("Set is empty");
+	public int smallest() throws IntegerSetException {
+		if(isEmpty()) {
+			throw new IntegerSetException("Set is empty");
+		}
 		return Collections.min(set);
 	}
 	
