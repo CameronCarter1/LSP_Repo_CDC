@@ -99,6 +99,8 @@ public class IntegerSet {
 				complementSet.add(item);
 			}
 		}
+		this.set.clear();
+	    this.set.addAll(complementSet);
 	}
 	
 	// Returns true if the set is empty, false otherwise. 5 pts.
