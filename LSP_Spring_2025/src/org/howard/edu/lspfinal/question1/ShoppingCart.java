@@ -135,7 +135,17 @@ public class ShoppingCart {
 
         } 
 
-    } 
+    }
+    
+    /**
+     * Returns the number of items in the cart.
+     *
+     * @return the size of the cart
+     */
+    public int getCartSize() {
+        return items.size();
+    }
+
 
  
 
