@@ -86,5 +86,33 @@ public class ShoppingCartTest {
         ShoppingCart cart = new ShoppingCart();
         assertEquals(0.0, cart.getTotalCost());
     }
+
+    @Test
+    @DisplayName("Test removing existing item from cart")
+    public void testRemoveExistingItem() {
+        ShoppingCart cart = new ShoppingCart();
+        cart.addItem("Tablet", 300.0);
+        assertEquals(1, cart.getCartSize());
+
+        cart.removeItem("Tablet");
+        assertEquals(0, cart.getCartSize());
+        assertEquals(0.0, cart.getTotalCost());
+    }
+
+    @Test
+    @DisplayName("Test removing non-existent item (expect exception)")
+    public void testRemoveNonExistentItem() {
+        ShoppingCart cart = new ShoppingCart();
+        cart.addItem("Headphones", 150.0);
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            cart.removeItem("Speakers");
+        });
+
+        // Ensure the existing item still remains
+        assertEquals(1, cart.getCartSize());
+        assertEquals(150.0, cart.getTotalCost());
+    }
 }
+
 
